@@ -8,7 +8,7 @@ set highlightedyank
 set which-key
 
 """ Plugin Settings --------------------------------------------------------------------------------
-nmap t :NERDTree<CR>
+nmap <leader>x :NERDTree<CR>
 
 """ Common Settings --------------------------------------------------------------------------------
 set scrolloff=10
@@ -105,7 +105,7 @@ nmap <leader>gu <Action>(ShowUsages)
 nmap <leader>gt <Action>(GotoTest)
 nmap <leader>gf <Action>(Back)
 nmap <leader>gb <Action>(Forward)
-map <leader>cs /dkjflsdjfldjf
+map <leader>cs /dkjflsdjfldjf<Enter>
 
 " Tool windows
 nmap <c-p> <Action>(JumpToLastWindow)
