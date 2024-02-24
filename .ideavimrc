@@ -6,6 +6,7 @@ set surround
 set easymotion
 set highlightedyank
 set which-key
+set commentary
 
 """ Plugin Settings --------------------------------------------------------------------------------
 nmap <leader>x :NERDTree<CR>
@@ -17,6 +18,8 @@ set incsearch
 set hlsearch
 set showmode
 set showcmd
+set notimeout
+set timeoutlen=5000
 
 """ IDEA Specific Settings -------------------------------------------------------------------------
 set ideajoin
@@ -55,7 +58,6 @@ nmap <leader>en <Action>(EditSourceInNewWindow)
 nmap <leader>n <Action>(NextWindow)
 nmap <leader>q <Action>(CloseContent)
 nmap <leader>qa <Action>(CloseAllEditors)
-nmap <leader>f <Action>(SelectInProjectView)
 
 " Editing source code
 vnoremap < <gv
@@ -68,7 +70,7 @@ nmap <leader>zc <Action>(CollapseAllRegions)
 nmap <leader>zo <Action>(ExpandAllRegions)
 nmap <leader>c <Action>(CommentByLineComment)
 map <leader>rn <Action>(RenameElement)
-map <leader>rm <Action>(ExtractMethod)
+map <leader>rm <Action>(ExtractFunction)
 map <leader>rv <Action>(IntroduceVariable)
 map <leader>rf <Action>(IntroduceField)
 map <leader>rs <Action>(ChangeSignature)
@@ -77,13 +79,14 @@ nmap <leader>= <Action>(ReformatCode)
 nmap <leader>o <Action>(OptimizeImports)
 nmap ge <Action>(GotoNextError)
 nmap gE <Action>(GotoPreviousError)
-nnoremap <leader>s :write<CR>
+nnoremap <leader><S-s> :write<CR>
 
 " Popup navigation
 imap <C-j> <Action>(PopupMenu-selectNext)
 imap <C-k> <Action>(PopupMenu-selectPrev)
 
 " Searching and Source Code Navigation
+map <leader>f <Action>(SelectInProjectView)
 map <leader>ff <action>(GotoFile)
 map <leader>fr <action>(RecentFiles)
 map <leader>fc <action>(FindInPath)
@@ -97,7 +100,6 @@ nmap <leader>b <Action>(ShowNavBar)
 nmap <c-s> <Action>(FileStructurePopup)
 nmap <c-o> <Action>(GotoSymbol)
 nmap <leader>gc <Action>(GotoClass)
-nmap <leader>gd <Action>(GotoDeclaration)
 nmap <leader>gy <Action>(GotoTypeDeclaration)
 nmap <leader>gi <Action>(GotoImplementation)
 nmap <leader>gp <Action>(GotoSuperMethod)
@@ -122,3 +124,4 @@ nmap ,f <Action>(RerunFailedTests)
 nmap ,b <Action>(ToggleLineBreakpoint)
 nmap ,d <Action>(Debug)
 nmap ,n <Action>(ActivateDebugToolWindow)
+nmap ,g <Action>(Android.SyncProject)
