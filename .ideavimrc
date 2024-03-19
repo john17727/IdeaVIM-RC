@@ -5,7 +5,7 @@ set NERDTree
 set surround
 set easymotion
 set highlightedyank
-set which-key
+"""set which-key """ Plugin is broken
 set commentary
 
 """ Plugin Settings --------------------------------------------------------------------------------
@@ -52,8 +52,6 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
-nmap <s-TAB> <Action>(PreviousTab)
-nmap <TAB> <Action>(NextTab)
 nmap <leader>en <Action>(EditSourceInNewWindow)
 nmap <leader>n <Action>(NextWindow)
 nmap <leader>q <Action>(CloseContent)
